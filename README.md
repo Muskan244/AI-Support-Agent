@@ -4,7 +4,7 @@ A mini AI support agent for a live chat widget, built for the Spur Full-Stack En
 
 ## Live Demo
 
-**Deployed URL:** [Coming Soon - Add your deployment URL here]
+**Deployed URL:** 
 
 ## Tech Stack
 
@@ -101,7 +101,6 @@ cd frontend
 # Install dependencies
 npm install
 
-# (Optional) Configure API URL if backend is not on localhost:3000
 # Create .env file with: VITE_API_URL=http://your-backend-url
 
 # Start the development server
@@ -173,14 +172,14 @@ The backend follows a **layered architecture** for separation of concerns:
    - Easy to deploy separately or together
 
 2. **SQLite with sql.js**
-   - Pure JavaScript SQLite implementation (no native compilation required)
+   - Pure JavaScript SQLite implementation
    - Zero configuration, works out of the box on any OS
    - Easy to swap for PostgreSQL in production
 
 3. **Session Management**
    - UUID-based session IDs for conversation tracking
    - Session stored in browser localStorage for persistence across page reloads
-   - No authentication required (per assignment spec)
+   - No authentication required
 
 4. **Service Layer Pattern**
    - LLM calls wrapped in `llm.ts` service with `generateReply(history, userMessage)`
@@ -277,7 +276,6 @@ inquiries.
 4. **Comprehensive Testing**
    - Unit tests for services and utilities
    - Integration tests for API endpoints
-   - E2E tests with Playwright for the frontend
 
 5. **WebSocket Support**
    - Real-time message delivery
@@ -287,20 +285,11 @@ inquiries.
    - UI to update FAQ content without code changes
    - Analytics dashboard for common questions
 
-7. **Docker Configuration**
-   - Docker Compose for local development
-   - Easier onboarding for new developers
-
-8. **Monitoring & Logging**
-   - Structured logging (Winston/Pino)
-   - Error tracking (Sentry)
-   - APM integration (DataDog)
-
-9. **Multi-language Support**
+7. **Multi-language Support**
    - i18n for UI text
    - Multilingual FAQ responses
 
-10. **Message Features**
+8. **Message Features**
     - Edit/delete messages
     - Message reactions
     - File/image uploads
@@ -311,7 +300,6 @@ inquiries.
 - SQLite not suitable for high-concurrency production use
 - FAQ knowledge is hardcoded in source code
 - No message editing or deletion
-- Single-tenant design
 - No offline support
 
 ---
@@ -410,13 +398,13 @@ Health check endpoint.
 
 ## Deployment
 
-### Backend (Render/Railway/Fly.io)
+### Backend (Render)
 
 1. Set environment variables (especially `OPENAI_API_KEY`)
 2. Build command: `npm run build`
 3. Start command: `npm start`
 
-### Frontend (Vercel/Netlify)
+### Frontend (Netlify)
 
 1. Set `VITE_API_URL` to your backend URL
 2. Build command: `npm run build`
