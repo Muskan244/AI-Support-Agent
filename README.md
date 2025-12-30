@@ -4,7 +4,7 @@ A mini AI support agent for a live chat widget, built for the Spur Full-Stack En
 
 ## Live Demo
 
-**Deployed URL:** 
+**Deployed URL:** https://ai-support-agent.netlify.app/
 
 ## Tech Stack
 
